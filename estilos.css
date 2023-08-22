@@ -1,0 +1,908 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    ;
+
+
+
+}
+
+:root {
+    --colorcito: rgb(223, 50, 50);
+}
+
+
+.header {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(img/portada.png);
+    background-size: cover;
+    background-position: center;
+    *background-position-y: 1px;
+    background-repeat: no-repeat;
+
+}
+
+.cmenu {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1000;
+
+
+}
+
+.menu {
+    max-width: 1200px;
+    *background-color: red;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .logo {
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 0.8rem;
+
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    list-style: none;
+    text-transform: uppercase;
+
+}
+
+.menu-hamb{
+
+    display: none;
+}
+
+
+
+
+.menu ul a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    padding: 0.8em 1.5em;
+    cursor: pointer;
+
+}
+
+.menu ul a:hover {
+
+    background-color: rgb(223, 50, 50);
+
+}
+
+.menu_activado {
+    display: flex;
+    background-color: blue;
+    z-index: 1000;
+
+}
+
+
+
+.portada {
+    *background-color: red;
+    max-width: 1200px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.portada .textop {
+    font-family: 'Roboto Slab', serif;
+    margin-left: 0.5rem;
+
+}
+
+.portada .textop h2,
+h3 {
+    text-transform: uppercase;
+
+}
+
+.portada .textop h2 {
+    color: yellow;
+    font-size: 5em;
+    font-weight: 900;
+    line-height: 1.5rem;
+
+}
+
+.portada .textop h3 {
+    color: rgb(223, 50, 50);
+    font-size: 4em;
+    font-weight: 900;
+
+
+}
+
+.portada .textop h4 {
+    color: white;
+    font-size: 2em;
+    line-height: 1.5rem;
+
+}
+
+
+.about {
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+   
+    padding-top: 40px;
+}
+
+.about .aboutcontainer {
+    max-width: 1200px;
+    *background-color: blue;
+    margin: auto;
+    padding-bottom: 80px;
+    height: auto;
+
+
+}
+
+.descontainer {
+    width: 100%;
+    height: 130px;
+    background-color: gray;
+    display: flex;
+    
+
+}
+
+.descontainer .descuento {
+
+    width: 600px;
+    background-color: rgb(223, 50, 50);
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 900;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+
+
+
+}
+
+.descontainer .descuento .suscr span {
+
+    color: white;
+
+}
+
+.descontainer .descuento .desc span {
+
+    color: white;
+    font-weight: 900;
+
+}
+
+
+
+
+
+.descontainer .caja-correo {
+    width: 600px;
+    background-color: rgb(18, 18, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.descontainer .caja-correo input[type="text"],
+input[type="button"] {
+    font-size: 1.3em;
+    padding: 0.5rem;
+
+}
+
+.descontainer .caja-correo input[type="button"] {
+    background-color: rgb(223, 50, 50);
+    border: none;
+    padding-right: 1rem;
+    color: white;
+    cursor: pointer;
+
+}
+
+.descontainer .caja-correo input[type="button"]:hover {
+    transform: scale(1.2);
+    transition: 0.5s ease;
+
+}
+
+
+
+.aboutcontainer .about-img-info {
+    width: 100%;
+    height: auto;
+    *background-color: grey;
+    display: flex;
+}
+
+.aboutcontainer .about-img-info .image {
+    width: 600px;
+    max-height: 600px;
+}
+
+.aboutcontainer .about-img-info .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+
+}
+
+.aboutcontainer .about-img-info .info {
+    width: 600px;
+    padding-top: 2rem;
+}
+
+.aboutcontainer .about-img-info .info h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3em;
+    padding-bottom: 1.6rem;
+}
+
+.aboutcontainer .about-img-info .info h1 span {
+    color: var(--colorcito);
+    font-size: 1.4em;
+
+}
+
+.aboutcontainer .about-img-info .info .negrita {
+    font-weight: bold;
+
+}
+
+.aboutcontainer .about-img-info .info p {
+    line-height: 1.5rem;
+    margin: 1rem;
+
+}
+
+
+
+
+.aboutcontainer .oferta-content {
+    width: 100%;
+    height: 120px;
+    *background-color: red;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    align-items: center;
+}
+
+.aboutcontainer .oferta-content .texto-oferta {
+    width: 600px;
+    text-transform: uppercase;
+    padding: 3rem;
+    font-weight: 800;
+
+}
+
+.aboutcontainer .oferta-content .texto-oferta span {
+    color: var(--colorcito)
+}
+
+.aboutcontainer .oferta-content .texto-oferta p {
+    font-size: 0.9em;
+
+}
+
+.aboutcontainer .oferta-content .texto-oferta .today {
+    font-size: 2em;
+
+}
+
+.aboutcontainer .oferta-content .boton-oferta {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutcontainer .oferta-content .boton-oferta input[type="button"] {
+    color: white;
+    background-color: rgb(223, 50, 50);
+    padding: 0.5rem 2rem;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.aboutcontainer .oferta-content .boton-oferta input[type="button"]:hover {
+    transform: scale(1.2);
+    transition: 0.5s ease;
+
+}
+
+.services {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/gimnsiovacio.jpg);
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(2px);
+    padding-bottom: 100px;
+
+
+
+
+
+}
+
+.services_container {
+    *background-color: yellow;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 100px;
+    *height: 600px;
+    display: flex;
+    
+}
+
+.services2 {
+    width: 100%;
+    height: 700px;
+    *background-color: red;
+
+    *background-color: rgba(221, 234, 238, 0.979);
+    position: relative;
+    padding-bottom: 100px;
+   
+
+
+}
+
+.services2_container {
+    background-color: white;
+    max-width: 1200px;
+    margin: auto;
+    *padding-top: 100px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   
+}
+
+.services_container .services_info {
+    width: 600px;
+    height: 100%;
+    padding-left: 1rem;
+    color: white;
+
+}
+
+.services_container .services_info h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3em;
+    margin-bottom: 1rem;
+
+
+}
+
+.services_container .services_info h2 span {
+    color: var(--colorcito);
+    font-size: 1.4em;
+
+}
+
+.services_container .services_info p {
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+
+}
+
+.services_container .services_info .p1 {
+    font-weight: 500;
+}
+
+.services_container .services_image {
+    width: 600px;
+    height: 400px;
+
+}
+
+.services_container .services_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.services2_container .caja {
+    top: 0;
+    width: 400px;
+    height: 400px;
+    outline: 1px solid rgba(221, 234, 238, 0.979);
+    padding: 1rem;
+    text-align: center;
+
+
+}
+
+.services2_container .caja .image {
+    width: 200px;
+    height: 150px;
+    *background-color: blue;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+
+
+
+
+
+}
+
+.services2_container .caja .image img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+
+}
+
+.services2_container .caja .texto h3 {
+    font-weight: 900;
+    margin-bottom: 1rem;
+    font-size: 1.7em;
+
+}
+
+.services2_container .caja .texto span {
+
+    color: var(--colorcito);
+
+
+}
+
+.facilities {
+    width: 100%;
+    height: auto;
+    background-color: rgba(221, 234, 238, 0.979);
+    padding-top: 100px;
+
+
+}
+
+.facilities .facilities_container {
+    max-width: 1200px;
+    height: auto;
+    *background-color: blueviolet;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+
+}
+
+.facilities .facilities_container .services_image {
+    width: 550px;
+    height: 500px;
+}
+
+.facilities .facilities_container .services_image img {
+    width: 600px;
+    height: 100%;
+    object-fit:contain;
+   
+}
+
+
+
+.facilities .facilities_container .services_info {
+    width: 550px;
+    height: 100%;
+    
+    padding-bottom: 100px;
+    
+}
+
+.facilities .facilities_container .services_info h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3em;
+    margin-bottom: 1rem;
+}
+
+.facilities .facilities_container .services_info h2 span {
+    font-size: 1.4em;
+    color: var(--colorcito);
+}
+
+.facilities .facilities_container .services_info .p1 {
+    margin-top: 1.5rem;
+    font-weight: 900;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+
+
+}
+
+.facilities .facilities_container .services_info li {
+    margin-top: 1.5rem;
+
+}
+
+.facilities .facilities_container .services_info li span {
+    color: var(--colorcito);
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.gallery {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(10, 2, 37, 0.7), rgba(20, 6, 51, 0.7)), url(img/gymvacio.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    *background-attachment: fixed;
+    padding-bottom: 150px;
+
+}
+
+.gallery_container {
+    max-width: 1200px;
+    
+    margin: auto;
+    padding-top: 80px;
+    height: auto;
+    
+
+
+}
+
+.gallery_container .fotos_gallery {
+   width: 100%;
+   height: 600px;
+   *background-color: pink;
+   margin-top: 60px;
+   display: grid;
+   grid-template-areas: 
+    "a1  a2  a3"
+    "a1  a4  a5"
+    
+   ;
+   border: 5px solid white;
+   overflow: hidden;
+
+}
+
+.foto{
+width: 400px;
+height: 300px;
+object-fit: contain;
+gap: 0;
+
+}
+
+.foto img{
+   width: 100%;
+   height: 100%;
+    
+    }
+
+.foto1{
+grid-area: a1;
+width: 400px;
+height: 100%;
+    
+}
+
+.foto2{
+    grid-area:a2 ;
+    
+}
+
+.foto3{
+    grid-area:a3 ;
+    
+}
+
+.foto4{
+
+    grid-area:a4 ; 
+}
+
+.foto5{
+    grid-area:a5;
+    
+}
+
+
+.gallery_container .gallery_texto h2 {
+    font-weight: 900;
+    font-size: 3em;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.gallery_container .gallery_texto h2 span {
+
+    font-size: 1.4em;
+    color: var(--colorcito);
+
+}
+
+
+
+
+
+
+.trainers {
+    width: 100%;
+    height: auto;
+    background-color: rgba(221, 234, 238, 0.979);
+    padding-top: 80px;
+    padding-bottom: 10px;
+
+}
+
+.trainers_container {
+
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding-bottom: 100px;
+   
+
+}
+
+.trainers_container .trainer_texto {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+
+}
+
+.trainers_container .trainer_texto h2 {
+    font-size: 3em;
+    font-weight: 900;
+
+}
+
+.trainers_container .trainer_texto h2 span {
+    font-size: 1.4em;
+    color: var(--colorcito);
+
+
+}
+
+
+.trainers_container .container_cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.trainers_container .container_cards .card {
+    width: 380px;
+    height: 600px;
+    *background-color: yellowgreen;
+    margin-top: 30px;
+
+}
+
+.trainers_container .container_cards .card .card_image {
+    width: 380px;
+    height: 420px;
+    *background-color: rgb(13, 78, 219);
+
+}
+
+.trainers_container .container_cards .card .card_image img {
+    width: 380px;
+    height: 100%;
+    object-fit: contain;
+
+
+}
+
+.trainers_container .container_cards .card .card_image .alice {
+    object-position: right;
+    object-fit: cover;
+
+
+
+}
+
+.trainers_container .container_cards .card .cajita_info {
+    height: 180px;
+    background: linear-gradient(rgb(145, 14, 35), rgb(231, 49, 79));
+    text-align: center;
+    border: 1px solid black;
+    position: relative;
+
+}
+
+
+.trainers_container .container_cards .card .cajita_info .cajita_info2 {
+
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    position: absolute;
+    background-color: yellow;
+
+
+}
+
+.trainers_container .container_cards .card .cajita_info h3 {
+    font-size: 1.4em;
+    font-weight: 900;
+    padding-top: 30px;
+
+}
+
+.trainers_container .container_cards .card .cajita_info h3 span {
+    color: white;
+
+}
+
+.trainers_container .container_cards .card .cajita_info p {
+
+    text-transform: capitalize;
+    color: white;
+    line-height: 2rem;
+}
+
+.trainers_container .container_cards .card .cajita_info .cajita_redes{
+*background-color: green;
+width: 100px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+margin-top: 0.5rem;
+    
+}
+
+.trainers_container .container_cards .card .cajita_info .cajita_redes .fa-facebook-f,  .fa-twitter, .fa-google{
+
+    color: white;
+    font-weight: 800;
+    font-size: 1.5em;
+    
+    
+}
+
+.contacts {
+
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(10, 2, 37, 0.7), rgba(20, 6, 51, 0.7)), url(img/gymvacio.jpg);
+    background-position: center;
+    *background-color:rgba(5, 5, 12, 0.89);
+    padding-bottom: 80px;
+
+
+}
+
+.contacts .mapa {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(221, 234, 238, 0.979);
+    padding-top: 80px;
+}
+
+.contacts .contacts_container {
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+    *background-color: green;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.contacts .contacts_container .formulario {
+    margin: auto;
+    width: 600px;
+    *background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 80px;
+    margin-top: 80px;
+   flex-wrap: wrap;
+   
+
+}
+
+.contacts .contacts_container .formulario .sobre {
+
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contacts .contacts_container .formulario .sobre .fa-envelope {
+
+  color: white;
+  font-size: 3rem;
+
+}
+
+.contacts .contacts_container .formulario .inputs {
+    width: 600px;
+display: flex;
+justify-content: space-evenly;
+margin-bottom: 1rem;
+flex-wrap: wrap;
+
+}
+
+.contacts .contacts_container .formulario  input[type="text"] {
+    
+    padding: 0.4rem;
+    font-size: 1em;
+
+    
+        
+    }
+
+.contacts .contacts_container .formulario .boton_enviar input[type="button"] {
+
+    color: white;
+   border: none;
+   padding: 0.6rem 2rem;
+   background-color: var(--colorcito);
+   text-transform: uppercase;
+   margin-top: 1rem;
+   cursor: pointer;
+   transition: 0.5s ease;
+}
+
+.contacts .contacts_container .formulario .boton_enviar input[type="button"]:hover {
+transform: scale(1.2);
+
+
+    
+}
